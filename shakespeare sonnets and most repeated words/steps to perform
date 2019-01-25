@@ -1,0 +1,9 @@
+steps to handle the given project:
+the first one is data cleaning
+1. data cleaning is the most time taking part it took me nearly 1 hour to convert text in to dict and save in to csv format
+2. after saving the file know we need to load the file and remove the punctuations we have various methods but i used python built in method
+3. next step is to remove the stop words in english like this,that,etc..
+4. the above two steps require a loop function
+5. after that i imported collections module to find the most repeating words
+6. concatanate the maxwords and the finaldata in to a dataframe and you are done.
+Happy MachineLearning!!

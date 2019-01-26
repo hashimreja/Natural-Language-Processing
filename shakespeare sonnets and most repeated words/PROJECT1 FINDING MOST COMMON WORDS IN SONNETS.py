@@ -45,13 +45,3 @@ for i in range(0,154):
 finalresult = pd.DataFrame({'Common Words':common_words1,'Sonnets':finaldata})
 #info
 finalresult.info()
-
-
-
-
-
-
-
-
-
-

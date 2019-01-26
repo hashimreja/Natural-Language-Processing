@@ -1,0 +1,5 @@
+Anaconda environment
+pandas
+nltk
+collections
+in nltk for additional downloads nltk.download()

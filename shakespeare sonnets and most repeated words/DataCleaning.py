@@ -163,13 +163,37 @@ mydata = {1:'From fairest creatures we desire increase, That thereby beauty’s 
          154:'The little Love-god lying once asleep,Laid by his side his heart-inflaming brand,Whilst many nymphs that vowed chaste life to keep,Came tripping by, but in her maiden hand,The fairest votary took up that fire,Which many legions of true hearts had warmed,And so the general of hot desire,Was sleeping by a virgin hand disarmed.This brand she quenched in a cool well by,Which from Love’s fire took heat perpetual,Growing a bath and healthful remedy,For men discased, but I my mistress’ thrall, Came there for cure and this by that I prove, Love’s fire heats water, water cools not love.'}                                               
 
 
-#creating spaces near the commas
-newdata = []
+#cleaning the words and punctuations
+t1 = []
 for i in mydata.values():
     i = i.replace(',',' ')
-    newdata.append(i)
+    t1.append(i)
+t2 = []
+for i in t1:
+    i = i.replace("'",'')
+    t2.append(i)
+t3 = []
+for i in t2:
+    i = i.replace('’','')
+    t3.append(i)
+t4 = []
+for i in t3:
+    i = i.replace(':','')
+    t4.append(i)
+t5 = []
+for i in t4:
+    i = i.replace('‘','')
+    t5.append(i)
+t6 = []
+#yet is repeating most of the time and it is not making any sense so i removed it..
+for i in t5:
+    i = i.replace('yet','')
+    t6.append(i)
+newdata = t6
+#deleting temporary lists
+del([t1,t2,t3,t4,t5,t6])
 #converting it in to series
 newdata = pd.Series(newdata) 
 #saving the model to csv format   
-newdata.to_csv('cleaneddata.csv')    
+newdata.to_csv('cleaneddata.csv')  
     
